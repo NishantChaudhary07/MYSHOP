@@ -1,0 +1,129 @@
+.navmenu{
+    flex-direction: column;
+    position: fixed;
+    right: -100%;
+    top: 89px;
+}
+
+#navclick:checked ~.navmenu{
+    display: block;
+    transition: 0.5s ease;
+    right: 0;
+}
+
+.navmenu li a{
+    display: block;
+    text-align: end;
+    font-weight: 500;
+}
+
+.navmenu li{
+    background-color: white;
+    border-bottom: 1px solid black;
+    width: 400px;
+}
+
+.menubtn{
+    position: fixed;
+    right: 50px;
+    cursor: pointer;
+    display: inline;
+}
+
+.maindiv h6{
+    font-size: 13px;
+}
+
+.maindiv h2{
+    font-size: 50px;
+}
+
+.category{
+    height: 22vh;
+    width: 99%;
+    justify-content: center;
+}
+.box {
+    width: 200px;
+    height: 150px;
+    margin: 0px 15px;
+}
+.box button{
+    font-size: 15px;
+    height: 30px;
+}
+
+#women{ 
+    background-size: 300px 250px;
+}
+
+#accessories{
+    background-size: 200px 150px;
+}
+
+#men{
+    background-size: 250px 180px ;
+}
+
+h1{
+    margin-top: 50px;
+}
+
+.shippingcard{
+    /* border: 2px solid red; */
+    height: 50vh;
+    flex-direction: column;
+    margin-bottom: 100px;
+}
+
+.ship{
+    width: 100%;
+    margin: 8px;
+}
+
+.blogcontainer{
+    flex-direction: column;
+    /* border: 2px solid red; */
+    align-items: center;
+}
+
+#left-slide , #right-slide{
+    margin: 25px;
+}
+
+.blog{
+    width: 650px;
+    height: 400px;
+    background-repeat: no-repeat;
+    margin: 30px 0px;
+    /* border: 2px solid black; */
+}
+
+.blogtext{
+    height: 270px;
+}
+
+#blog1, #blog2, #blog3 ,#blog4, #blog5, #blog6{
+    background-size: 750px 500px;
+}
+
+/* Footer */
+footer{
+    height: 250px;
+}
+
+.firstp{
+    font-size: 13px;
+}
+
+.secondp, .thirdp{
+    font-size: 13px;
+}
+
+footer h3{
+    font-size: 15px;
+}
+
+footer a{
+    font-size: 12px;
+}

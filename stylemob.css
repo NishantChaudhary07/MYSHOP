@@ -1,0 +1,11 @@
+.category{
+    flex-direction: column;
+    height: 120vh;
+    border: 2px solid red;
+    align-items: center;
+}
+.box {
+    border: 2px solid black;
+    width: 80%;
+    align-items: center;
+}

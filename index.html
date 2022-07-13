@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MY SHOP</title>
+    <link rel="stylesheet" href="stylelap.css">
+    <link rel="stylesheet" media="screen and (max-width:990px)" href="styletab.css">
+    <script src="https://kit.fontawesome.com/41a002b982.js" crossorigin="anonymous"></script>
+
+</head>
+
+<body onload="showBlogs(); showProducts(); updateCartTotal();">
+    <header id="home">
+        <div class="navcontainer">
+            <div class="logocontainer">
+                <a href="#home">MY<span>SHOP</span></a>
+            </div>
+            <nav class="navbar">
+                <input type="checkbox" name="" id="navclick">
+                <label for="navclick" class="menubtn">
+                    <i class="fas fa-bars fa-xl"></i>
+                </label>
+                <ul class="navmenu">
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="./AllProducts.html" target="_blank">Shop</a></li>
+                    <li><a href="#blogs">Blogs</a></li>
+                    <li><a href="#footer">About us</a></li>
+                </ul>
+
+                <ul class="hamcontainer">
+                    <li><a href="./Cart.html" target="_blank">
+                        <i class="fas fa-shopping-cart carticon"></i>
+                        <span class="carttotal">0</span>
+                        </a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <section class="maindiv">
+        <h6>SPRING / SUMMER COLLECTION 2022</h6>
+        <h2>Get up to 30% Off</h2>
+        <h2>New Arrivals</h2>
+        <div class="shopnow">
+            <a href="./AllProducts.html" target="_blank"><button>SHOP NOW</button></a>
+        </div>
+    </section>
+    <section class="category">
+        <div class="box" id="women">
+            <button>WOMEN'S</button>
+        </div>
+        <div class="box" id="accessories">
+            <button>ACCESSORIES'S</button>
+        </div>
+        <div class="box" id="men">
+            <button>MEN'S</button>
+        </div>
+    </section>
+
+    <section class="newarrivals">
+        <h1>New Arrivals</h1>
+        <hr>
+        <div class="categorysort">
+            <ul>
+                <li><button onclick="showAllProducts()">ALL</button></li>
+                <li><button onclick="showWomenProduct()">WOMEN'S</button></li>
+                <li><button onclick="showAccessories()">ACCESSORIES'S</button></li>
+                <li><button onclick="showMenProduct()">MEN'S</button></li>
+            </ul>
+        </div>
+        <div class="shopitems">
+            
+        </div>
+    </section>
+    <section class="shippingcard">
+        <div class="ship">
+            <i class="fas fa-truck fa-xl"></i>
+            <div>
+                <h6>FREE SHIPPING</h6>
+                <p>Suffered Alteration in Some Form</p>
+            </div>
+        </div>
+        <div class="ship">
+            <i class="fa fa-money fa-xl"></i>
+            <div>
+                <h6>CASH ON DELIVEY</h6>
+                <p>The Internet Tend To Repeat</p>
+            </div>
+        </div>
+        <div class="ship">
+            <i class="fa fa-undo fa-xl"></i>
+            <div>
+                <h6>45 DAYS RETURN</h6>
+                <p>Making it Look Like Readable</p>
+            </div>
+        </div>
+        <div class="ship"><i class="fa fa-clock-o fa-xl"></i>
+            <div>
+                <h6>OPENING ALL WEEK</h6>
+                <p>8AM - 09PM</p>
+            </div>
+        </div>
+    </section>
+    <section class="blogs" id="blogs">
+        <h1>Latest Blogs</h1>
+        <hr>
+        <div class="blogcontainer" >
+            <button id="left-slide" onclick="moveLeft()"><i class="fa fa-angle-left" aria-hidden="true"></i></button>
+            <div class="blog" id="blog1">
+                <div class="blogtext">
+                    <h3>Blog 1</h3>
+                    <h4>Here are the trends I see coming this fall</h4>
+                    <p>BY ADMIN | DEC 01, 2017</p>
+                    <a href="./Blogs.html" target="_blank">Read More</a>
+                </div>
+            </div>
+            <div class="blog" id="blog2">
+                <div class="blogtext">
+                    <h3>Blog 2</h3>
+                    <h4>Here are the trends I see coming this fall</h4>
+                    <p>BY ADMIN | DEC 01, 2017</p>
+                    <a href="./Blogs.html" target="_blank">Read More</a>
+                </div>
+            </div>
+            <div class="blog" id="blog3">
+                <div class="blogtext">
+                    <h3>Blog 3</h3>
+                    <h4>Here are the trends I see coming this fall</h4>
+                    <p>BY ADMIN | DEC 01, 2017</p>
+                    <a href="./Blogs.html" target="_blank">Read More</a>
+                </div>
+            </div>
+            <div class="blog" id="blog4">
+                <div class="blogtext">
+                    <h3>Blog 4</h3>
+                    <h4>Here are the trends I see coming this fall</h4>
+                    <p>BY ADMIN | DEC 01, 2017</p>
+                    <a href="./Blogs.html" target="_blank">Read More</a>
+                </div>
+            </div>
+            <div class="blog" id="blog5">
+                <div class="blogtext">
+                    <h3>Blog 5</h3>
+                    <h4>Here are the trends I see coming this fall</h4>
+                    <p>BY ADMIN | DEC 01, 2017</p>
+                    <a href="./Blogs.html" target="_blank">Read More</a>
+                </div>
+            </div>
+            <div class="blog" id="blog6">
+                <div class="blogtext">
+                    <h3>Blog 6</h3>
+                    <h4>Here are the trends I see coming this fall</h4>
+                    <p>BY ADMIN | DEC 01, 2017</p>
+                    <a href="./Blogs.html" target="_blank">Read More</a>
+                </div>
+            </div>
+            <button id="right-slide" onclick="moveRight()"><i class="fa fa-angle-right" aria-hidden="true"></i></button>
+        </div>
+    </section>
+  <footer id="footer">
+    <div class="footermenu" id="links">
+        <div>
+        <h2>MY<span>SHOP</span></h2>
+        </div>
+        <p class="firstp">Lorem ispum is a placeholder text commonly used as a free text.</p>
+        <div class="fa-class">
+        <a href="#"><i class="fa fa-facebook-square fa-2xl" ></i></a>
+        <a href="#"><i class="fa-brands fa-twitter fa-2xl"></i></a>
+        <a href="#"><i class="fa-brands fa-instagram fa-2xl"></i></a>
+        <a href="#"><i class="fa-brands fa-youtube fa-2xl"></i></a>
+        </div>
+        <p class="secondp">Copyrights 2022</p>
+        <p class="thirdp">@nishantchaudhary07</p>
+    </div>
+    <div class="footermenu" id="product">
+        <h3>Product</h3>
+        <a href="#">Download</a>
+        <a href="#">Pricing</a>
+        <a href="#">Locations</a>
+        <a href="#">Server</a>
+        <a href="#">Countries</a>
+        <a href="#">Blog</a>
+    </div>
+    <div class="footermenu"  id="category">
+        <h3>Category</h3>
+        <a href="#">Men</a>
+        <a href="#">Women</a>
+        <a href="#">Kids</a>
+        <a href="#">Best Seller</a>
+        <a href="#">New Arrivals</a>
+    </div>
+    <div class="footermenu" id="myaccount">
+        <h3>My Account</h3>
+        <a href="#">My Account</a>
+        <a href="#">Discount</a>
+        <a href="#">Returns</a>
+        <a href="#">Order History</a>
+        <a href="#">Order Tracking</a>
+    </div>
+    <div class="footermenu" id="contactus">
+        <h3>Contact Us</h3>
+         <div>
+        <i class="fa fa-map-marker fa-xm" aria-hidden="true"></i>
+        <a href="#">123 Street Trafford,London,Uk</a>
+         </div>
+         <div>
+        <i class="fa fa-envelope fa-xs" aria-hidden="true"></i>
+        <a>Info@sitename.com</a>
+         </div>
+         <div>
+        <i class="fa fa-phone fa-xs" aria-hidden="true"></i>
+        <a>+456789789001</a>
+         </div>
+    </div>
+  </footer>
+  <script src="script.js"></script>
+</body>
+
+</html>

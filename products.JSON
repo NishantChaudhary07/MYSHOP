@@ -1,0 +1,212 @@
+[
+    {
+        "id": 1,
+        "image": "./Image files/Shopping Items/item1.webp",
+        "description": "Women Green Shoulder Bag ",
+        "category": "Women's bag",
+        "price": 520
+    },
+    {
+        "id": 2,
+        "image": "./Image files/Shopping Items/item2.png",
+        "description": "UV Protection Sunglasses for Men",
+        "category": "men's sunglass",
+        "price": 610
+    },
+    {
+        "id": 3,
+        "image": "./Image files/Shopping Items/item3.png",
+        "description": "Road Hoody for women",
+        "category": "Women's clothing",
+        "price": 310
+    },
+    {
+        "id": 4,
+        "image": "./Image files/Shopping Items/item4.png",
+        "description": "Canvas Shoes For Men",
+        "category": "men's shoes",
+        "price": 520
+    },
+    {
+        "id": 5,
+        "image": "./Image files/Shopping Items/item5.png",
+        "description": "60 L Strolley Duffel Bag for Men",
+        "category": "men's bag",
+        "price": 310
+    },
+    {
+        "id": 6,
+        "image": "./Image files/Shopping Items/item6.webp",
+        "description": "HP V236w 32 GB Pen Drive",
+        "category": "Accessories",
+        "price": 210
+    },
+    {
+        "id": 7,
+        "image": "./Image files/Shopping Items/item7.jpg",
+        "description": "Women's T-shirt",
+        "category": "Women's clothing",
+        "price": 340
+    },
+    {
+        "id": 8,
+        "image": "./Image files/Shopping Items/item8.webp",
+        "description": "Gold-plated Jewel Set",
+        "category": "Accessories",
+        "price": 840
+    },
+    {
+        "id": 9,
+        "image": "./Image files/Shopping Items/item9.webp",
+        "description": "Men Hooded Black T-Shirt",
+        "category": "men's clothing",
+        "price": 330
+    },
+    {
+        "id": 10,
+        "image": "./Image files/Shopping Items/item10.webp",
+        "description": "APPLE iPhone 64 GB",
+        "category": "Accessories",
+        "price": 1000
+    },
+    {
+        "id":11,
+        "description": "Fjallraven-Foldsack No. 1 Backpack,Fits 15 Laptops",
+        "price": 109.95,
+        "category": "men's clothing",
+        "image": "https://fakestoreapi.com/img/81fPKd-2AYL._AC_SL1500_.jpg"
+    },
+    {
+        "id": 12,
+        "description": "Mens Casual Premium Slim Fit T-Shirts ",
+        "price": 22.3,
+        "category": "men's clothing",
+        "image": "https://fakestoreapi.com/img/71-3HjGNDUL._AC_SY879._SX._UX._SY._UY_.jpg"
+    },
+    {
+        "id": 13,
+        "description": "Mens Cotton Jacket",
+        "price": 55.99,
+        "category": "men's clothing",
+        "image": "https://fakestoreapi.com/img/71li-ujtlUL._AC_UX679_.jpg"
+    },
+    {
+        "id": 14,
+        "description": "Mens Casual Slim Fit",
+        "price": 15.99,
+        "category": "men's clothing",
+        "image": "https://fakestoreapi.com/img/71YXzeOuslL._AC_UY879_.jpg"
+    },
+    {
+        "id": 15,
+        "description": "John Hardy Women's Gold & Silver Dragon Station Chain Bracelet",
+        "price": 695,
+        "category": "accessories",
+        "image": "https://fakestoreapi.com/img/71pWzhdJNwL._AC_UL640_QL65_ML3_.jpg"
+    },
+    {
+        "id": 16,
+        "description": "Solid Gold Petite Micropave ",
+        "price": 168,
+        "category": "accessories",
+        "image": "https://fakestoreapi.com/img/61sbMiUnoGL._AC_UL640_QL65_ML3_.jpg"
+    },
+    {
+        "id": 17,
+        "description": "White Gold Plated Princess",
+        "price": 9.99,
+        "category": "accessories",
+        "image": "https://fakestoreapi.com/img/71YAIFU48IL._AC_UL640_QL65_ML3_.jpg"
+    },
+    {
+        "id": 18,
+        "description": "Pierced Owl Rose Gold Plated Stainless Steel Double",
+        "price": 10.99,
+        "category": "jewelery",
+        "image": "https://fakestoreapi.com/img/51UDEzMJVpL._AC_UL640_QL65_ML3_.jpg"
+    },
+    {
+        "id": 19,
+        "description": "WD 2TB Portable External Hard Drive - USB 3.0 ",
+        "price": 64,
+        "category": "accessories",
+        "image": "https://fakestoreapi.com/img/61IBBVJvSDL._AC_SY879_.jpg"
+    },
+    {
+        "id": 20,
+        "description": "SanDisk SSD PLUS 1TB Internal SSD - SATA III 6Gb/s",
+        "price": 109,
+        "category": "electronics",
+        "image": "https://fakestoreapi.com/img/61U7T1koQqL._AC_SX679_.jpg"
+    },
+    {
+        "id": 21,
+        "description": "Silicon Power 256GB SSD",
+        "price": 109,
+        "category": "electronics",
+        "image": "https://fakestoreapi.com/img/71kWymZ+c+L._AC_SX679_.jpg"
+    },
+    {
+        "id": 22,
+        "description": "WD 4TB Gaming Drive",
+        "price": 114,
+        "category": "accessories",
+        "image": "https://fakestoreapi.com/img/61mtL65D4cL._AC_SX679_.jpg"
+    },
+    {
+        "id": 23,
+        "description": "Acer SB220Q bi 21.5 inches Full HD IPS Ultra-Thin",
+        "price": 599,
+        "category": "accessories",
+        "image": "https://fakestoreapi.com/img/81QpkIctqPL._AC_SX679_.jpg"
+    },
+    {
+        "id": 24,
+        "description": "Samsung 49-Inch CHG90 144Hz Curved Gaming Monitor",
+        "price": 999.99,
+        "category": "electronics",
+        "image": "https://fakestoreapi.com/img/81Zt42ioCgL._AC_SX679_.jpg"
+    },
+    {
+        "id": 25,
+        "description": "Women's 3-in-1 Snowboard Jacket Winter Coats",
+        "price": 56.99,
+        "category": "women's clothing",
+        "image": "https://fakestoreapi.com/img/51Y5NI-I5jL._AC_UX679_.jpg"
+    },
+    {
+        "id": 26,
+        "description": "Women's Hooded Leather Moto Biker Jacket",
+        "price": 29.95,
+        "category": "women's clothing",
+        "image": "https://fakestoreapi.com/img/81XH0e8fefL._AC_UY879_.jpg"
+    },
+    {
+        "id": 27,
+        "description": "Rain Jacket Women Climbing Raincoats",
+        "price": 39.99,
+        "category": "women's clothing",
+        "image": "https://fakestoreapi.com/img/71HblAHs5xL._AC_UY879_-2.jpg"
+    },
+    {
+        "id": 28,
+        "description": "MBJ Women's Short Sleeve Boat Neck V ",
+        "price": 9.85,
+        "category": "women's clothing",
+        "image": "https://fakestoreapi.com/img/71z3kpMAYsL._AC_UY879_.jpg"
+    },
+    {
+        "id": 29,
+        "description": "Opna Women's Short Sleeve Moisture",
+        "price": 7.95,
+        "category": "women's clothing",
+        "image": "https://fakestoreapi.com/img/51eg55uWmdL._AC_UX679_.jpg"
+    },
+    {
+        "id": 30,
+        "description": "DANVOUY Womens T Shirt Casual Cotton Short",
+        "price": 12.99,
+        "category": "women's clothing",
+        "image": "https://fakestoreapi.com/img/61pHAEJ4NML._AC_UX679_.jpg"
+    }
+]

@@ -59,7 +59,7 @@ function showProducts() {
 }
 
 function showAllProducts() {
-    fetch('./products.json').then((data) => {
+    fetch('products.json').then((data) => {
         return data.json();
     }).then((data) => {
         let html = "";

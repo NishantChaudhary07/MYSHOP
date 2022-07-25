@@ -78,7 +78,7 @@ function showAllProducts() {
 }
 
 function showWomenProduct() {
-    fetch('./products.json').then((data) => {
+    fetch('products.JSON').then((data) => {
         return data.json();
     }).then((data) => {
         let html = "";
@@ -101,7 +101,7 @@ function showWomenProduct() {
 }
 
 function showMenProduct() {
-    fetch('./products.json').then((data) => {
+    fetch('products.JSON').then((data) => {
         return data.json();
     }).then((data) => {
         let html = "";
@@ -124,7 +124,7 @@ function showMenProduct() {
 }
 
 function showAccessories() {
-    fetch('./products.json').then((data) => {
+    fetch('products.JSON').then((data) => {
         return data.json();
     }).then((data) => {
         let html = "";
@@ -152,7 +152,7 @@ function showAccessories() {
 function displayByCategory() {
     var choice = document.getElementById("category");
     if (choice.value == "all") {
-        fetch('./products.json').then((data) => {
+        fetch('products.JSON').then((data) => {
             return data.json();
         }).then((data) => {
             let html = "";
@@ -170,7 +170,7 @@ function displayByCategory() {
         });
     }
     else if (choice.value == "men") {
-        fetch('./products.json').then((data) => {
+        fetch('products.JSON').then((data) => {
             return data.json();
         }).then((data) => {
             let html = "";
@@ -193,7 +193,7 @@ function displayByCategory() {
     }
 
     else if (choice.value == "women") {
-        fetch('./products.json').then((data) => {
+        fetch('products.JSON').then((data) => {
             return data.json();
         }).then((data) => {
             let html = "";
@@ -216,7 +216,7 @@ function displayByCategory() {
     }
 
     else if (choice.value == "accessories") {
-        fetch('./products.json').then((data) => {
+        fetch('products.JSON').then((data) => {
             return data.json();
         }).then((data) => {
             let html = "";
@@ -243,7 +243,7 @@ function displayByCategory() {
 function sortByPrice() {
     var choice = document.getElementById("price");
     if (choice.value == "default") {
-        fetch('./products.json').then((data) => {
+        fetch('products.JSON').then((data) => {
             return data.json();
         }).then((data) => {
             let html = "";
@@ -261,7 +261,7 @@ function sortByPrice() {
         });
     }
     else if (choice.value == "ascending") {
-        fetch('./products.json').then((data) => {
+        fetch('products.JSON').then((data) => {
             return data.json();
         }).then((data) => {
             data.sort(function (a, b) { return a.price - b.price });
@@ -280,7 +280,7 @@ function sortByPrice() {
         });
     }
     else if (choice.value == "descending")
-        fetch('./products.json').then((data) => {
+        fetch('products.JSON').then((data) => {
             return data.json();
         }).then((data) => {
             data.sort(function (a, b) { return b.price - a.price });
@@ -331,7 +331,7 @@ function addToCart(btn_id) {
     else {
         cartObj = JSON.parse(cart);
     }
-    fetch('./products.json').then((data) => {
+    fetch('products.JSON').then((data) => {
         return data.json();
     }).then((data) => {
         let objQty = {

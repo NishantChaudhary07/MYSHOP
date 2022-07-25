@@ -39,7 +39,7 @@ function moveLeft() {
 
 //For new arrival section
 function showProducts() {
-    fetch('products.json').then((data) => {
+    fetch('products.JSON').then((data) => {
         id = "item${element.id}"
         return data.json();
     }).then((data) => {
@@ -59,7 +59,7 @@ function showProducts() {
 }
 
 function showAllProducts() {
-    fetch('products.json').then((data) => {
+    fetch('products.JSON').then((data) => {
         return data.json();
     }).then((data) => {
         let html = "";

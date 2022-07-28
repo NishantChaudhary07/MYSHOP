@@ -1,7 +1,7 @@
 .navmenu{
     flex-direction: column;
     position: fixed;
-    right: -100%;
+    right: -110%;
     top: 89px;
 }
 
@@ -92,8 +92,8 @@ h1{
 }
 
 .blog{
-    width: 650px;
-    height: 400px;
+    width: 550px;
+    height: 350px;
     background-repeat: no-repeat;
     margin: 30px 0px;
     /* border: 2px solid black; */

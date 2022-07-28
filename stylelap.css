@@ -30,16 +30,6 @@ li {
     z-index: 5;
 }
 
-/* .navcontainer::before {
-    content: "";
-    background: white;
-    position: fixed;
-    height: 20%;
-    width: 100%;
-    z-index: -1;
-     position: fixed; 
-} */
-
 .navmenu {
     display: flex;
     align-items: center;
@@ -497,14 +487,56 @@ h1 {
     transform: scale(1.1);
 }
 
-footer{
+#footer{
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(180 32 32 / 82%);
+    margin-top: 55px;
+    height: 220px;
+    /* border: 2px solid yellow; */
+    border-radius: 100px 20px 0px 0px;
+}
+.mainfoot{
     display: flex;
     align-items: center;
     justify-content: space-around;
-    background-color: rgb(180 32 32 / 82%);
-    margin-top: 55px;
-    height: 280px;
-    border-radius: 100px 20px 0px 0px;
+ 
+}
+
+.footerend{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 40px;
+    border: 2px solid black;
+    background-color: black;
+    padding: 10px;
+    
+}
+
+.footerend p{
+    color: white;
+}
+
+.fa-class a{
+      padding: 10px 10px;
+      color: red;
+}
+
+.fa-class a:hover{
+    color: blue;
+}
+
+.footerend div h2{
+    display: inline;
+    color: red;
+    font-size: 18px;
+    background-color: white;
+    padding: 3px;
+    border-radius: 10px;
+}
+
+.footerend div span{
+    color: blue
 }
 
 .secondp, .thirdp{
@@ -516,35 +548,6 @@ footer{
     flex-direction: column;
 }
 
-#links div{
-    margin-bottom: 8px;
-}
-
-#links div h2{
-    display: inline;
-    color: red;
-    font-size: 18px;
-    background-color: white;
-    padding: 3px;
-    border-radius: 10px;
-}
-
-#links div span{
-    color: blue
-}
-
-#links i{
-    color: rgba(0, 0, 255, 0.557);
-    padding: 15px 0px;
-}
-
-#links p{
-    padding: 6px;
-}
-
-#links{
-    width: 24%;
-}
 
 .footermenu div i{
    font-size: 18px;
@@ -557,7 +560,7 @@ footer{
 
 .footermenu a{
     text-decoration: none;
-    color: white;
+    color: rgb(242, 239, 239);
     padding: 3px;
 }
 
@@ -565,9 +568,6 @@ footer{
     color: blue;
 }
 
-#links i:hover{
-    color:rgb(11, 11, 12);
-}
 
 #contactus div{
     padding: 5px;

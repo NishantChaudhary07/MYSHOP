@@ -80,3 +80,33 @@ h1{
     padding: 5px;
 }
 
+/* footer */
+.footerend{
+    padding: 3px;
+}
+
+.footerend div h2{
+    font-size: 10px;
+}
+
+.footerend p{
+    font-size: 12px;
+}
+
+.fa-class a{
+    font-size: 8px;
+    padding: 2px;
+}
+
+#footer{
+    border-radius: 50px 20px 0px 0px;
+}
+
+.footermenu div i{
+    font-size: 13px;
+}
+
+.mainfoot{
+    display: flex;
+    justify-content:space-between;
+}

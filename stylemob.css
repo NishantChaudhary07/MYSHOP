@@ -103,10 +103,59 @@ h1{
 }
 
 .footermenu div i{
-    font-size: 13px;
+    font-size: 12px;
+}
+
+.footermenu a{
+    padding: 2px;
 }
 
 .mainfoot{
     display: flex;
-    justify-content:space-between;
+    justify-content: space-between;
+}
+
+#contactus{
+    width: 28%;
+}
+
+#footer{
+    height: 210px;
+}
+
+/* Product page */
+
+.filter label{
+    font-size: 14px;
+}
+
+.filter select{
+    font-size: 12px;
+    height: 25px;
+    width: 105px;
+}
+
+.filter option{
+    font-size: 10px;
+}
+
+/* Blogs*/
+.mainblogcontainer h2{
+    font-size: 30px;
+}
+
+.mainblog{
+    flex-direction: column;
+}
+
+.mainblog img{
+    height: 100px;
+    width: 100%;
+    border-radius: 75px;
+    margin: 20px;
+    box-shadow: 10px 15px 15px rgba(12, 9, 9, 0.537);
+}
+
+.mainblog p{
+    font-size: 15px;
 }

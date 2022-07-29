@@ -7,6 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="stylelap.css">
     <link rel="stylesheet" media="screen and (max-width:990px)" href="styletab.css">
+    <link rel="stylesheet" media="screen and (max-width:700px)" href="stylemob.css">
     <script src="products.JSON"></script>
     <script src="https://kit.fontawesome.com/41a002b982.js" crossorigin="anonymous"></script>
     <title>Cart</title>
@@ -54,24 +55,6 @@
 
         </div>
     </div>
-    <script>
-        let carttotal = 0;
-        function updateCartTotal() {
-        let cart = localStorage.getItem("cart");
-        if (cart == null) {
-            cartObj = [];
-        }
-        else {
-            cartObj = JSON.parse(cart);
-        }
-        cartObj.forEach(element => {
-            carttotal+=element.quantity;
-        });
-        document.querySelector(".carttotal").innerHTML = carttotal;
-        window.location.reload();
-    }
-    
-    </script>
     <script src="script.js"></script>
 </body>
 

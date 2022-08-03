@@ -40,7 +40,6 @@ function moveLeft() {
 //For new arrival section
 function showProducts() {
     fetch('products.JSON').then((data) => {
-        id = "item${element.id}"
         return data.json();
     }).then((data) => {
         let html = "";
@@ -49,7 +48,7 @@ function showProducts() {
                 <div class="item" id="item${data[i].id}">
                 <img src="${data[i].image}" alt="">
                 <h4>${data[i].description}</h4>
-                <h5>$${data[i].price}</h5>
+                <h5>INR ${data[i].price}</h5>
                 <button id="${data[i].id}" onclick="addToCart(this.id); redirect(); updateCartTotal()">ADD TO CART</button>
              </div>
                 `;
@@ -68,7 +67,7 @@ function showAllProducts() {
                 <div class="item" id="item${element.id}">
                 <img src="${element.image}" alt="">
                 <h4>${element.description}</h4>
-                <h5>$${element.price}</h5>
+                <h5>INR ${element.price}</h5>
                 <button id="${element.id}" onclick="addToCart(this.id); redirect()">ADD TO CART</button>
              </div>
                 `;
@@ -90,7 +89,7 @@ function showWomenProduct() {
                 <div class="item" id="item${element.id}">
                 <img src="${element.image}" alt="">
                 <h4>${element.description}</h4>
-                <h5>$${element.price}</h5>
+                <h5>INR ${element.price}</h5>
                 <button id="${element.id}" onclick="addToCart(this.id); redirect()">ADD TO CART</button>
              </div>
                 `;
@@ -113,7 +112,7 @@ function showMenProduct() {
                 <div class="item" id="item${element.id}">
                 <img src="${element.image}" alt="">
                 <h4>${element.description}</h4>
-                <h5>$${element.price}</h5>
+                <h5>INR ${element.price}</h5>
                 <button id="${element.id}" onclick="addToCart(this.id); redirect()">ADD TO CART</button>
              </div>
                 `;
@@ -136,7 +135,7 @@ function showAccessories() {
                 <div class="item" id="item${element.id}">
                 <img src="${element.image}" alt="">
                 <h4>${element.description}</h4>
-                <h5>$${element.price}</h5>
+                <h5>INR ${element.price}</h5>
                 <button id="${element.id}" onclick="addToCart(this.id); redirect()">ADD TO CART</button>
              </div>
                 `;
@@ -161,7 +160,7 @@ function displayByCategory() {
                     <div class="item" id="item${element.id}">
                     <img src="${element.image}" alt="">
                     <h4>${element.description}</h4>
-                    <h5>$${element.price}</h5>
+                    <h5>INR ${element.price}</h5>
                     <button id="${element.id}" onclick="addToCart(this.id); redirect()">ADD TO CART</button>
                  </div>
                     `;
@@ -182,7 +181,7 @@ function displayByCategory() {
                     <div class="item" id="item${element.id}">
                     <img src="${element.image}" alt="">
                     <h4>${element.description}</h4>
-                    <h5>$${element.price}</h5>
+                    <h5>INR ${element.price}</h5>
                     <button id="${element.id}" onclick="addToCart(this.id); redirect()">ADD TO CART</button>
                  </div>
                     `;
@@ -205,7 +204,7 @@ function displayByCategory() {
                         <div class="item" id="item${element.id}">
                         <img src="${element.image}" alt="">
                         <h4>${element.description}</h4>
-                        <h5>$${element.price}</h5>
+                        <h5>INR ${element.price}</h5>
                         <button id="${element.id}" onclick="addToCart(this.id); redirect()">ADD TO CART</button>
                      </div>
                         `;
@@ -228,7 +227,7 @@ function displayByCategory() {
                     <div class="item" id="item${element.id}">
                     <img src="${element.image}" alt="">
                     <h4>${element.description}</h4>
-                    <h5>$${element.price}</h5>
+                    <h5>INR ${element.price}</h5>
                     <button id="${element.id}" onclick="addToCart(this.id); redirect()">ADD TO CART</button>
                  </div>
                     `;
@@ -252,7 +251,7 @@ function sortByPrice() {
                     <div class="item" id="item${element.id}">
                     <img src="${element.image}" alt="">
                     <h4>${element.description}</h4>
-                    <h5>$${element.price}</h5>
+                    <h5>INR ${element.price}</h5>
                     <button id="${element.id}" onclick="addToCart(this.id); redirect()">ADD TO CART</button>
                  </div>
                     `;
@@ -271,7 +270,7 @@ function sortByPrice() {
                     <div class="item" id="item${element.id}">
                     <img src="${element.image}" alt="">
                     <h4>${element.description}</h4>
-                    <h5>$${element.price}</h5>
+                    <h5>INR ${element.price}</h5>
                     <button id="${element.id}" onclick="addToCart(this.id); redirect()">ADD TO CART</button>
                  </div>
                     `;
@@ -290,7 +289,7 @@ function sortByPrice() {
                     <div class="item" id="item${element.id}">
                     <img src="${element.image}" alt="">
                     <h4>${element.description}</h4>
-                    <h5>$${element.price}</h5>
+                    <h5>INR ${element.price}</h5>
                     <button id="${element.id}" onclick="addToCart(this.id); redirect()">ADD TO CART</button>
                  </div>
                     `;
@@ -405,12 +404,13 @@ function showCartItems() {
     </div>
     <hr>`;
     });
-    // if (!total == 0) {
-    //     document.querySelector(".msg").innerHTML = "";
-    // }
-    // else {
-    //     document.querySelector(".cartitemcontainer").style.border = '0px';
-    // }
+    if (!total == 0) {
+        document.querySelector(".msg").innerHTML = " ";
+    }
+    else {
+        document.querySelector(".cartitemscontainer").style.border = '0px';
+        document.querySelector(".cartsummary").style.display = "none";
+    }
     document.querySelector(".cartitemscontainer").innerHTML += html;
     var shipping;
     var subtotal=total;
@@ -430,7 +430,7 @@ function showCartItems() {
     <p>Subtotal: INR ${subtotal}</p>
     <div class="summarybtn">
     <a href="./AllProducts.html"><button class="shopmore">Shop More</button></a>
-    <button class="placeorder" onclick="PlaceOrder()">Place Order</button>
+    <button class="placeorder" onclick="PlaceOrder(); Alert();">Place Order</button>
     </div> `;
 }
 
@@ -460,8 +460,12 @@ function remove(btn_id) {
 
 function PlaceOrder() {
     localStorage.clear();
-    alert("Your order has been successfully placed");
     window.location.reload();
+}
+
+function Alert(){
+    document.querySelector(".alert").style.transition = "all 3s";
+    document.querySelector(".alert").style.display = "block"; 
 }
 
 // Incereasing and decreasing quantity using + and -

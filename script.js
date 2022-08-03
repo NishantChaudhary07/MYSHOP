@@ -386,53 +386,52 @@ function showCartItems() {
     cartObj.forEach(element => {
         let producttotal = element.Obj.price * element.quantity;
         total = total + producttotal;
-        html += `<table class="entrytable">
-        <tr class="tebleitem" id="item${element.Obj.id}">
-        <td><button class="btn" id="${element.Obj.id}"  onclick="remove(this.id)"><i class="fa fa-window-close fa-2x" aria-hidden="true"></i></button></td>
-        <td style="width: 250px">${element.Obj.description}</td>
-        <td><img src="${element.Obj.image}" alt="" height=100 width=100 border-radius="50px"></td>
-        <td style="width: 95px; padding:20px">$${element.Obj.price}</td>
-        <td style="width: 75px; padding: 20px"><button class="minus" id="${element.Obj.id}" onclick="decrease(this.id); ">-</button> ${element.quantity} <button class="plus" id="${element.Obj.id}" onclick="increase(this.id);">+</button></td>
-        <td style="width: 95px; padding: 20px">$${producttotal}</td>
-    </tr> </table><hr class="producthr">`;
+        html += `<div class="cartitemcontainer">
+        <div class="cartitem">
+            <img src="${element.Obj.image}" alt="">
+            <div class="cartiteminfo">
+                <h4>${element.Obj.description}</h4>
+                <p>INR ${element.Obj.price}</p>
+            </div>
+        </div>
+        <div class="cartitemfoot">
+            <div class="cartqty">
+            <button class="minus" id="${element.Obj.id}" onclick="decrease(this.id); ">-</button><p> ${element.quantity} </p> 
+            <button
+                class="plus" id="${element.Obj.id}" onclick="increase(this.id);">+</button>
+            </div>
+            <button class="removebtn" id="${element.Obj.id}" onclick="remove(this.id)">Remove</button>
+        </div>
+    </div>
+    <hr>`;
     });
-    if (!total == 0) {
-        document.querySelector(".msg").innerHTML = "";
+    // if (!total == 0) {
+    //     document.querySelector(".msg").innerHTML = "";
+    // }
+    // else {
+    //     document.querySelector(".cartitemcontainer").style.border = '0px';
+    // }
+    document.querySelector(".cartitemscontainer").innerHTML += html;
+    var shipping;
+    var subtotal=total;
+    if(total<=500){
+        shipping="INR 40";
+        subtotal+=40;
     }
-    else {
-        document.querySelector(".cartitems").style.border = '0px';
-        document.querySelector(".tablecontainer").display.style = 'none';
+    else{
+        shipping='Free';
     }
-    html = ` 
-    <table class="entrytable">
-    <tr class="tableitem">
-    <th style="width: 30px; padding: 30px;">Remove</th>
-    <th style="width: 250px">Product</th>
-    <th style="width: 100px">Image</th>
-    <th style="width: 95px; padding: 20px">Price</th>
-    <th style="width: 75px; padding:20px;">Quantity</th>
-    <th style="width: 95px; padding: 20px">Total</th>
-</tr></table><hr class="producthr">`+ html;
-    document.querySelector(".cartitems").innerHTML += html;
-    document.querySelector(".cartsummary").innerHTML += ` <table class="summarytable">
-    <caption class="tableheading">Cart Summary</caption>
-    <tr class="total">
-        <th>Item Price:</th>
-        <th>$${total}</th>
-    </tr>
-    <tr class="total">
-        <th>Shipping: </th>
-        <th>Free</th>
-    </tr>
-    <tr class="total">
-        <th>Cart Total:</th>
-        <th>$${total}</th>
-    </tr>
-</table>
-<div class="cartbtns">
-<a href="./AllProducts.html"><button class="contshipping">Continue Shopping</button></a>
-<button class="placeorder" id="placeorder" onclick="PlaceOrder()">Place Order</button>
-</div>`;
+    document.querySelector(".cartsummary").innerHTML += `
+    <h3>Cart Summary</h3> 
+    <p>Total Price: INR ${total}</p> 
+    <hr> 
+    <p>Shipping: ${shipping}</p>
+    <hr>
+    <p>Subtotal: INR ${subtotal}</p>
+    <div class="summarybtn">
+    <a href="./AllProducts.html"><button class="shopmore">Shop More</button></a>
+    <button class="placeorder" onclick="PlaceOrder()">Place Order</button>
+    </div> `;
 }
 
 function redirect() {

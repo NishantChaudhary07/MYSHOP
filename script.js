@@ -49,7 +49,7 @@ function showProducts() {
                 <img src="${data[i].image}" alt="">
                 <h4>${data[i].description}</h4>
                 <h5>INR ${data[i].price}</h5>
-                <button id="${data[i].id}" onclick="addToCart(this.id); redirect(); updateCartTotal()">ADD TO CART</button>
+                <button id="${data[i].id}" onclick="addToCart(this.id); redirect(); updateCartTotal();">ADD TO CART</button>
              </div>
                 `;
         }
@@ -346,9 +346,10 @@ function addToCart(btn_id) {
         localStorage.setItem("cart", JSON.stringify(cartObj));
         removeDuplicate();
     });
-    alert("Product added to cart.");
+    // alert("Product added to cart.");
+    addedToCartAlert();
     updateCartTotal();
-    window.location.reload();
+    // window.location.reload();
 }
 
 //To update cart total
@@ -430,13 +431,11 @@ function showCartItems() {
     <p>Subtotal: INR ${subtotal}</p>
     <div class="summarybtn">
     <a href="./AllProducts.html"><button class="shopmore">Shop More</button></a>
-    <button class="placeorder" onclick="PlaceOrder(); Alert();">Place Order</button>
+    <button class="placeorder" onclick="PlaceOrder();">Place Order</button>
     </div> `;
 }
 
 function redirect() {
-    // var newtab = window.open('./Cart.html'); to open cart in different window after updation
-    // newtab.document.location.reload(true);
     window.location.href = "./Cart.html";
 }
 
@@ -460,10 +459,19 @@ function remove(btn_id) {
 
 function PlaceOrder() {
     localStorage.clear();
-    window.location.reload();
+    document.querySelector(".cartitemscontainer").style.display = "none";
+    setTimeout(() => {
+        window.location.reload();  
+    }, 2000);
+    
+    orderPlacedAlert();
+}
+function orderPlacedAlert(){
+    document.querySelector(".alert").style.transition = "all 3s";
+    document.querySelector(".alert").style.display = "block"; 
 }
 
-function Alert(){
+function addedToCartAlert(){
     document.querySelector(".alert").style.transition = "all 3s";
     document.querySelector(".alert").style.display = "block"; 
 }

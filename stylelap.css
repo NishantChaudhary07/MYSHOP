@@ -819,8 +819,7 @@ h1 {
     top: 120px;
     left: 50px;
     font-size: 18px;
-    border: 1px solid red;
-    background-color: rgba(193, 20, 20, 0.765);
+    background-color: rgba(20, 193, 20, 0.582);
     border-radius: 5px;
     padding: 20px 50px;
     width: 40%;

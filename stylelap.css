@@ -690,11 +690,11 @@ h1 {
 .cartitemscontainer{
     display: flex;
     flex-direction: column;
-    width: 50%;
+    width: 60%;
     border: 1px solid rgba(103, 100, 100, 0.685);
     position: relative;
     top: 100px;
-    left: 50px;
+    left: 30px;
     box-shadow: 5px 5px 30px rgba(121, 119, 119, 0.858);
     border-radius: 5px;
     margin-bottom: 150px;
@@ -719,6 +719,9 @@ h1 {
 }
 
 .plus,.minus{
+    display: flex;
+    align-items: center;
+    justify-content: center;
     width: 25px;
     height: 25px;
     cursor: pointer;
@@ -726,6 +729,18 @@ h1 {
     font-size: 18px;
     border: 1px solid rgba(57, 53, 53, 0.498);
     border-radius: 35px;
+}
+
+.cartitemfoot p{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 7px;
+    border: 0.2px solid rgba(77, 75, 75, 0.58); 
+    height: 12px; 
+    width: 30px;
+    border-radius: 3px;
+    margin: 0px 5px; 
 }
 
 .cartqty{
@@ -755,21 +770,11 @@ h1 {
     justify-content:space-between;
 }
 
-.cartitemfoot p{
-    padding: 7px;
-    border: 0.2px solid rgba(77, 75, 75, 0.58); 
-    height: 12px; 
-    width: 30px;
-    border-radius: 3px;
-    text-align: center;
-    margin: 0px 5px; 
-}
-
 .cartsummary{
     position: fixed;
     top: 100px;
-    right: 50px;
-    width: 25%;
+    right: 30px;
+    width: 30%;
     padding: 5px;
     border: 1px solid rgba(0, 0, 0, 0.411);
     box-shadow: 5px 5px 30px rgba(121, 119, 119, 0.858);

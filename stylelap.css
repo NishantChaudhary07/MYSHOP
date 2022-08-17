@@ -91,7 +91,7 @@ li {
 }
 /* Error */
 .navmenu a:active{
-    color: rgb(17, 27, 227);
+    color: blue;
 }
 
 #navclick{

@@ -39,8 +39,7 @@ function moveLeft() {
 
 //For new arrival section
 function showProducts() {
-    fetch('./products.json').then((data) => {
-        id = "item${element.id}"
+    fetch('products.JSON').then((data) => {
         return data.json();
     }).then((data) => {
         let html = "";
@@ -49,8 +48,8 @@ function showProducts() {
                 <div class="item" id="item${data[i].id}">
                 <img src="${data[i].image}" alt="">
                 <h4>${data[i].description}</h4>
-                <h5>$${data[i].price}</h5>
-                <button id="${data[i].id}" onclick="addToCart(this.id); redirect(); updateCartTotal()">ADD TO CART</button>
+                <h5>INR ${data[i].price}</h5>
+                <button id="${data[i].id}" onclick="addToCart(this.id); redirect(); updateCartTotal();">ADD TO CART</button>
              </div>
                 `;
         }
@@ -59,7 +58,7 @@ function showProducts() {
 }
 
 function showAllProducts() {
-    fetch('./products.json').then((data) => {
+    fetch('products.JSON').then((data) => {
         return data.json();
     }).then((data) => {
         let html = "";
@@ -68,7 +67,7 @@ function showAllProducts() {
                 <div class="item" id="item${element.id}">
                 <img src="${element.image}" alt="">
                 <h4>${element.description}</h4>
-                <h5>$${element.price}</h5>
+                <h5>INR ${element.price}</h5>
                 <button id="${element.id}" onclick="addToCart(this.id); redirect()">ADD TO CART</button>
              </div>
                 `;
@@ -78,7 +77,7 @@ function showAllProducts() {
 }
 
 function showWomenProduct() {
-    fetch('./products.json').then((data) => {
+    fetch('products.JSON').then((data) => {
         return data.json();
     }).then((data) => {
         let html = "";
@@ -90,7 +89,7 @@ function showWomenProduct() {
                 <div class="item" id="item${element.id}">
                 <img src="${element.image}" alt="">
                 <h4>${element.description}</h4>
-                <h5>$${element.price}</h5>
+                <h5>INR ${element.price}</h5>
                 <button id="${element.id}" onclick="addToCart(this.id); redirect()">ADD TO CART</button>
              </div>
                 `;
@@ -101,7 +100,7 @@ function showWomenProduct() {
 }
 
 function showMenProduct() {
-    fetch('./products.json').then((data) => {
+    fetch('products.JSON').then((data) => {
         return data.json();
     }).then((data) => {
         let html = "";
@@ -113,7 +112,7 @@ function showMenProduct() {
                 <div class="item" id="item${element.id}">
                 <img src="${element.image}" alt="">
                 <h4>${element.description}</h4>
-                <h5>$${element.price}</h5>
+                <h5>INR ${element.price}</h5>
                 <button id="${element.id}" onclick="addToCart(this.id); redirect()">ADD TO CART</button>
              </div>
                 `;
@@ -124,7 +123,7 @@ function showMenProduct() {
 }
 
 function showAccessories() {
-    fetch('./products.json').then((data) => {
+    fetch('products.JSON').then((data) => {
         return data.json();
     }).then((data) => {
         let html = "";
@@ -136,7 +135,7 @@ function showAccessories() {
                 <div class="item" id="item${element.id}">
                 <img src="${element.image}" alt="">
                 <h4>${element.description}</h4>
-                <h5>$${element.price}</h5>
+                <h5>INR ${element.price}</h5>
                 <button id="${element.id}" onclick="addToCart(this.id); redirect()">ADD TO CART</button>
              </div>
                 `;
@@ -152,7 +151,7 @@ function showAccessories() {
 function displayByCategory() {
     var choice = document.getElementById("category");
     if (choice.value == "all") {
-        fetch('./products.json').then((data) => {
+        fetch('products.JSON').then((data) => {
             return data.json();
         }).then((data) => {
             let html = "";
@@ -161,7 +160,7 @@ function displayByCategory() {
                     <div class="item" id="item${element.id}">
                     <img src="${element.image}" alt="">
                     <h4>${element.description}</h4>
-                    <h5>$${element.price}</h5>
+                    <h5>INR ${element.price}</h5>
                     <button id="${element.id}" onclick="addToCart(this.id); redirect()">ADD TO CART</button>
                  </div>
                     `;
@@ -170,7 +169,7 @@ function displayByCategory() {
         });
     }
     else if (choice.value == "men") {
-        fetch('./products.json').then((data) => {
+        fetch('products.JSON').then((data) => {
             return data.json();
         }).then((data) => {
             let html = "";
@@ -182,7 +181,7 @@ function displayByCategory() {
                     <div class="item" id="item${element.id}">
                     <img src="${element.image}" alt="">
                     <h4>${element.description}</h4>
-                    <h5>$${element.price}</h5>
+                    <h5>INR ${element.price}</h5>
                     <button id="${element.id}" onclick="addToCart(this.id); redirect()">ADD TO CART</button>
                  </div>
                     `;
@@ -193,7 +192,7 @@ function displayByCategory() {
     }
 
     else if (choice.value == "women") {
-        fetch('./products.json').then((data) => {
+        fetch('products.JSON').then((data) => {
             return data.json();
         }).then((data) => {
             let html = "";
@@ -205,7 +204,7 @@ function displayByCategory() {
                         <div class="item" id="item${element.id}">
                         <img src="${element.image}" alt="">
                         <h4>${element.description}</h4>
-                        <h5>$${element.price}</h5>
+                        <h5>INR ${element.price}</h5>
                         <button id="${element.id}" onclick="addToCart(this.id); redirect()">ADD TO CART</button>
                      </div>
                         `;
@@ -216,7 +215,7 @@ function displayByCategory() {
     }
 
     else if (choice.value == "accessories") {
-        fetch('./products.json').then((data) => {
+        fetch('products.JSON').then((data) => {
             return data.json();
         }).then((data) => {
             let html = "";
@@ -228,7 +227,7 @@ function displayByCategory() {
                     <div class="item" id="item${element.id}">
                     <img src="${element.image}" alt="">
                     <h4>${element.description}</h4>
-                    <h5>$${element.price}</h5>
+                    <h5>INR ${element.price}</h5>
                     <button id="${element.id}" onclick="addToCart(this.id); redirect()">ADD TO CART</button>
                  </div>
                     `;
@@ -243,7 +242,7 @@ function displayByCategory() {
 function sortByPrice() {
     var choice = document.getElementById("price");
     if (choice.value == "default") {
-        fetch('./products.json').then((data) => {
+        fetch('products.JSON').then((data) => {
             return data.json();
         }).then((data) => {
             let html = "";
@@ -252,7 +251,7 @@ function sortByPrice() {
                     <div class="item" id="item${element.id}">
                     <img src="${element.image}" alt="">
                     <h4>${element.description}</h4>
-                    <h5>$${element.price}</h5>
+                    <h5>INR ${element.price}</h5>
                     <button id="${element.id}" onclick="addToCart(this.id); redirect()">ADD TO CART</button>
                  </div>
                     `;
@@ -261,7 +260,7 @@ function sortByPrice() {
         });
     }
     else if (choice.value == "ascending") {
-        fetch('./products.json').then((data) => {
+        fetch('products.JSON').then((data) => {
             return data.json();
         }).then((data) => {
             data.sort(function (a, b) { return a.price - b.price });
@@ -271,7 +270,7 @@ function sortByPrice() {
                     <div class="item" id="item${element.id}">
                     <img src="${element.image}" alt="">
                     <h4>${element.description}</h4>
-                    <h5>$${element.price}</h5>
+                    <h5>INR ${element.price}</h5>
                     <button id="${element.id}" onclick="addToCart(this.id); redirect()">ADD TO CART</button>
                  </div>
                     `;
@@ -280,7 +279,7 @@ function sortByPrice() {
         });
     }
     else if (choice.value == "descending")
-        fetch('./products.json').then((data) => {
+        fetch('products.JSON').then((data) => {
             return data.json();
         }).then((data) => {
             data.sort(function (a, b) { return b.price - a.price });
@@ -290,7 +289,7 @@ function sortByPrice() {
                     <div class="item" id="item${element.id}">
                     <img src="${element.image}" alt="">
                     <h4>${element.description}</h4>
-                    <h5>$${element.price}</h5>
+                    <h5>INR ${element.price}</h5>
                     <button id="${element.id}" onclick="addToCart(this.id); redirect()">ADD TO CART</button>
                  </div>
                     `;
@@ -331,7 +330,7 @@ function addToCart(btn_id) {
     else {
         cartObj = JSON.parse(cart);
     }
-    fetch('./products.json').then((data) => {
+    fetch('products.JSON').then((data) => {
         return data.json();
     }).then((data) => {
         let objQty = {
@@ -347,9 +346,10 @@ function addToCart(btn_id) {
         localStorage.setItem("cart", JSON.stringify(cartObj));
         removeDuplicate();
     });
-    alert("Product added to cart.");
+    // alert("Product added to cart.");
+    addedToCartAlert();
     updateCartTotal();
-    window.location.reload();
+    // window.location.reload();
 }
 
 //To update cart total
@@ -386,58 +386,56 @@ function showCartItems() {
     cartObj.forEach(element => {
         let producttotal = element.Obj.price * element.quantity;
         total = total + producttotal;
-        html += `<table class="entrytable">
-        <tr class="tebleitem" id="item${element.Obj.id}">
-        <td><button class="btn" id="${element.Obj.id}"  onclick="remove(this.id)"><i class="fa fa-window-close fa-2x" aria-hidden="true"></i></button></td>
-        <td style="width: 250px">${element.Obj.description}</td>
-        <td><img src="${element.Obj.image}" alt="" height=100 width=100 border-radius="50px"></td>
-        <td style="width: 95px; padding:20px">$${element.Obj.price}</td>
-        <td style="width: 75px; padding: 20px"><button class="minus" id="${element.Obj.id}" onclick="decrease(this.id); ">-</button> ${element.quantity} <button class="plus" id="${element.Obj.id}" onclick="increase(this.id);">+</button></td>
-        <td style="width: 95px; padding: 20px">$${producttotal}</td>
-    </tr> </table><hr class="producthr">`;
+        html += `<div class="cartitemcontainer">
+        <div class="cartitem">
+            <img src="${element.Obj.image}" alt="">
+            <div class="cartiteminfo">
+                <h4>${element.Obj.description}</h4>
+                <p>INR ${element.Obj.price}</p>
+            </div>
+        </div>
+        <div class="cartitemfoot">
+            <div class="cartqty">
+            <button class="minus" id="${element.Obj.id}" onclick="decrease(this.id); ">-</button><p> ${element.quantity} </p> 
+            <button
+                class="plus" id="${element.Obj.id}" onclick="increase(this.id);">+</button>
+            </div>
+            <button class="removebtn" id="${element.Obj.id}" onclick="remove(this.id)">Remove</button>
+        </div>
+    </div>
+    <hr>`;
     });
     if (!total == 0) {
-        document.querySelector(".msg").innerHTML = "";
+        document.querySelector(".msg").innerHTML = " ";
     }
     else {
-        document.querySelector(".cartitems").style.border = '0px';
-        document.querySelector(".tablecontainer").display.style = 'none';
+        document.querySelector(".cartitemscontainer").style.border = '0px';
+        document.querySelector(".cartsummary").style.display = "none";
     }
-    html = ` 
-    <table class="entrytable">
-    <tr class="tableitem">
-    <th style="width: 30px; padding: 30px;">Remove</th>
-    <th style="width: 250px">Product</th>
-    <th style="width: 100px">Image</th>
-    <th style="width: 95px; padding: 20px">Price</th>
-    <th style="width: 75px; padding:20px;">Quantity</th>
-    <th style="width: 95px; padding: 20px">Total</th>
-</tr></table><hr class="producthr">`+ html;
-    document.querySelector(".cartitems").innerHTML += html;
-    document.querySelector(".cartsummary").innerHTML += ` <table class="summarytable">
-    <caption class="tableheading">Cart Summary</caption>
-    <tr class="total">
-        <th>Item Price:</th>
-        <th>$${total}</th>
-    </tr>
-    <tr class="total">
-        <th>Shipping: </th>
-        <th>Free</th>
-    </tr>
-    <tr class="total">
-        <th>Cart Total:</th>
-        <th>$${total}</th>
-    </tr>
-</table>
-<div class="cartbtns">
-<a href="./AllProducts.html"><button class="contshipping">Continue Shopping</button></a>
-<button class="placeorder" id="placeorder" onclick="PlaceOrder()">Place Order</button>
-</div>`;
+    document.querySelector(".cartitemscontainer").innerHTML += html;
+    var shipping;
+    var subtotal=total;
+    if(total<=500){
+        shipping="INR 40";
+        subtotal+=40;
+    }
+    else{
+        shipping='Free';
+    }
+    document.querySelector(".cartsummary").innerHTML += `
+    <h3>Cart Summary</h3> 
+    <p>Total Price: INR ${total}</p> 
+    <hr> 
+    <p>Shipping: ${shipping}</p>
+    <hr>
+    <p>Subtotal: INR ${subtotal}</p>
+    <div class="summarybtn">
+    <a href="./AllProducts.html"><button class="shopmore">Shop More</button></a>
+    <button class="placeorder" onclick="PlaceOrder();">Place Order</button>
+    </div> `;
 }
 
 function redirect() {
-    // var newtab = window.open('./Cart.html'); to open cart in different window after updation
-    // newtab.document.location.reload(true);
     window.location.href = "./Cart.html";
 }
 
@@ -461,8 +459,21 @@ function remove(btn_id) {
 
 function PlaceOrder() {
     localStorage.clear();
-    alert("Your order has been successfully placed");
-    window.location.reload();
+    document.querySelector(".cartitemscontainer").style.display = "none";
+    setTimeout(() => {
+        window.location.reload();  
+    }, 2000);
+    
+    orderPlacedAlert();
+}
+function orderPlacedAlert(){
+    document.querySelector(".alert").style.transition = "all 3s";
+    document.querySelector(".alert").style.display = "block"; 
+}
+
+function addedToCartAlert(){
+    document.querySelector(".alert").style.transition = "all 3s";
+    document.querySelector(".alert").style.display = "block"; 
 }
 
 // Incereasing and decreasing quantity using + and -

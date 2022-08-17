@@ -7,6 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="stylelap.css">
     <link rel="stylesheet" media="screen and (max-width:990px)" href="styletab.css">
+    <link rel="stylesheet" media="screen and (max-width:700px)" href="stylemob.css">
     <script src="products.JSON"></script>
     <script src="https://kit.fontawesome.com/41a002b982.js" crossorigin="anonymous"></script>
     <title>Products</title>
@@ -39,6 +40,9 @@
             </nav>
         </div>
     </header>
+    <div class="alert">
+        <p>Item has been successfully added to cart</p>
+    </div>
     <div class="bodycontainer">
         <div class="productsheading">
             <div class="mainheading">
@@ -50,8 +54,8 @@
                 <div>
                     <label for="price">Price:</label>
                     <select name="price" id="price" onchange="sortByPrice()">
-                        <option value="default">Default</option>
-                        <option value="ascending">Low to High</option>
+                        <option  value="default">Default</option>
+                        <option  value="ascending">Low to High</option>
                         <option value="descending">High to Low</option>
                     </select>
                 </div>
@@ -102,80 +106,62 @@
         </section>
     </div>
     <footer id="footer">
-        <div class="footermenu" id="links">
-            <div>
-            <i class="fa-solid fa-fire fa-2x"></i>
-            <h2>MYSHOP</h2>
-            </div>
-            <p class="firstp">Lorem ispum is a placeholder text commonly used as a free text.</p>
-            <div class="fa-class">
-            <a href="#"><i class="fa fa-facebook-square fa-2xl" ></i></a>
-            <a href="#"><i class="fa-brands fa-twitter fa-2xl"></i></a>
-            <a href="#"><i class="fa-brands fa-instagram fa-2xl"></i></a>
-            <a href="#"><i class="fa-brands fa-youtube fa-2xl"></i></a>
-            </div>
-            <p class="secondp">Copyrights 2022</p>
-            <p class="thirdp">@nishantchaudhary07</p>
+        <div class="mainfoot">
+          <div class="footermenu" id="product">
+              <h3>Product</h3>
+              <a href="#">Download</a>
+              <a href="#">Pricing</a>
+              <a href="#">Locations</a>
+              <a href="#">Server</a>
+              <a href="#">Countries</a>
+              <a href="#">Blog</a>
+          </div>
+          <div class="footermenu"  id="category">
+              <h3>Category</h3>
+              <a href="#">Men</a>
+              <a href="#">Women</a>
+              <a href="#">Kids</a>
+              <a href="#">Best Seller</a>
+              <a href="#">New Arrivals</a>
+          </div>
+          <div class="footermenu" id="myaccount">
+              <h3>My Account</h3>
+              <a href="#">My Account</a>
+              <a href="#">Discount</a>
+              <a href="#">Returns</a>
+              <a href="#">Order History</a>
+              <a href="#">Order Tracking</a>
+          </div>
+          <div class="footermenu" id="contactus">
+              <h3>Contact Us</h3>
+               <div>
+              <i class="fa fa-map-marker fa-xm" aria-hidden="true"></i>
+              <a href="#">123 Street Trafford,London,Uk</a>
+               </div>
+               <div>
+              <i class="fa fa-envelope fa-xs" aria-hidden="true"></i>
+              <a>Info@myshop.com</a>
+               </div>
+               <div>
+              <i class="fa fa-phone fa-xs" aria-hidden="true"></i>
+              <a>+456789789001</a>
+               </div>
+          </div>
         </div>
-        <div class="footermenu" id="product">
-            <h3>Product</h3>
-            <a href="#">Download</a>
-            <a href="#">Pricing</a>
-            <a href="#">Locations</a>
-            <a href="#">Server</a>
-            <a href="#">Countries</a>
-            <a href="#">Blog</a>
-        </div>
-        <div class="footermenu"  id="category">
-            <h3>Category</h3>
-            <a href="#">Men</a>
-            <a href="#">Women</a>
-            <a href="#">Kids</a>
-            <a href="#">Best Seller</a>
-            <a href="#">New Arrivals</a>
-        </div>
-        <div class="footermenu" id="myaccount">
-            <h3>My Account</h3>
-            <a href="#">My Account</a>
-            <a href="#">Discount</a>
-            <a href="#">Returns</a>
-            <a href="#">Order History</a>
-            <a href="#">Order Tracking</a>
-        </div>
-        <div class="footermenu" id="contactus">
-            <h3>Contact Us</h3>
-             <div>
-            <i class="fa fa-map-marker fa-xm" aria-hidden="true"></i>
-            <a href="#">123 Street Trafford,London,Uk</a>
-             </div>
-             <div>
-            <i class="fa fa-envelope fa-xs" aria-hidden="true"></i>
-            <a>Info@sitename.com</a>
-             </div>
-             <div>
-            <i class="fa fa-phone fa-xs" aria-hidden="true"></i>
-            <a>+456789789001</a>
-             </div>
-        </div>
-      </footer>
-      <script>
-        let carttotal = 0;
-        function updateCartTotal() {
-        let cart = localStorage.getItem("cart");
-        if (cart == null) {
-            cartObj = [];
-        }
-        else {
-            cartObj = JSON.parse(cart);
-        }
-        cartObj.forEach(element => {
-            carttotal+=element.quantity;
-        });
-        document.querySelector(".carttotal").innerHTML = carttotal;
-        window.location.reload();
-    }
-    
-    </script>
+          <div class="footerend" id="footerend">
+              <div>
+                  <h2>MY<span>SHOP</span></h2>
+              </div>
+              <div class="fa-class">
+              <a href="#"><i class="fa fa-facebook-square fa-2xl" ></i></a>
+              <a href="#"><i class="fa-brands fa-twitter fa-2xl"></i></a>
+              <a href="#"><i class="fa-brands fa-instagram fa-2xl"></i></a>
+              <a href="#"><i class="fa-brands fa-youtube fa-2xl"></i></a>
+              </div>
+              <p class="secondp">Copyrights 2022</p>
+              <p class="thirdp">@nishantchaudhary07</p>
+          </div>
+        </footer>
     <script src="script.js"></script>
 </body>
 

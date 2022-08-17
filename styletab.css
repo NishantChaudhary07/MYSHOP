@@ -1,7 +1,7 @@
 .navmenu{
     flex-direction: column;
     position: fixed;
-    right: -100%;
+    right: -110%;
     top: 89px;
 }
 
@@ -92,8 +92,8 @@ h1{
 }
 
 .blog{
-    width: 650px;
-    height: 400px;
+    width: 550px;
+    height: 350px;
     background-repeat: no-repeat;
     margin: 30px 0px;
     /* border: 2px solid black; */
@@ -126,4 +126,61 @@ footer h3{
 
 footer a{
     font-size: 12px;
+}
+
+/*Cart*/
+
+.cartitem img{
+    height: 80px;
+    width: 70px;
+    padding: 25px;
+    margin-right: 5px;
+}
+
+.cartitemscontainer{
+    left: 20px;
+}
+
+.cartitem h4{
+    font-size: 15px;
+    margin-bottom: 7px;
+}
+
+.cartitem p{
+    font-size: 14px;
+}
+
+.plus,.minus{
+    width: 22px;
+    height: 23px;
+    font-size: 18px;
+}
+
+.cartitemfoot p{
+    height: 10px; 
+    width: 25px;
+}
+.removebtn{
+    font-size: 15px;
+    margin-right: 30px;
+    padding: 8px;
+}
+
+.cartsummary{
+    right: 20px
+}
+
+.cartsummary h3{
+    padding: 8px;
+    padding-bottom: 7px;
+}
+
+.cartsummary p{
+    font-size: 15px;
+}
+
+.shopmore , .placeorder{
+    padding: 10px 15px;
+    font-size: 13px;
+    border-radius: 5px;
 }
